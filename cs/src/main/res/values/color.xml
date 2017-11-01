@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <color name="colorPrimaryDark">#64A7DF</color>
+    <color name="colorPrimary">#9DC9EB</color>
+    <!-- <color name="textColorPrimary">#F6F9FB</color> -->
+    <color name="textColorPrimary">#8d8d8d</color>
+    <color name="windowBackground">#FFFFFF</color>
+
+    <!--
+    <color name="white">#FFFFFF</color>--><!--白色 -->
+    <color name="transparent">#0000</color>
+    <color name="weibo_listtab_off">#8d8d8d</color>
+
+    <!-- Location -->
+    <color name="grey"> #ebebeb</color>
+    <color name="black"> #000000</color>
+    <color name="darkgrey"> #C0C0C0</color>
+    <color name="white"> #FFFFFF</color>
+    <color name="red"> #FF0000</color>
+    <color name="f850_default_blue">#0079ff</color>
+
+    <drawable name="transparent">#00000000</drawable>
+
+    <color name="header_toast_bg">#ccebfc</color>
+    <color name="header_toast">#024ca1</color>
+    <color name="header_toast_line">#abdaf4</color>
+    <color name="offline_down_title">#909090</color>
+    <color name="offline_head_font">#FFFFFF</color>
+    <color name="gary">#898989</color>
+    <color name="taobao_black">#333333</color>
+    <color name="offline_down_size">#777777</color>
+    <color name="gray_lite">#c5c5c5</color>
+    <color name="gray_lite1">#D5D5D5</color>
+    <color name="progress_background">#ededed</color>
+    <color name="blue">#4c90f9</color>
+
+    <!-- map2d -->
+    <color name="phone_bg">#f6f6f6</color>
+    <color name="itemlist">#f4f4f4</color>
+    <color name="watermark_hint">#ccffffff</color>
+
+
+    <color name="home_gray">#F1F0F0</color><!-- 灰白 -->
+    <color name="tab_gray">#F6F6F6</color><!-- 灰白 Tab背景色 -->
+    <color name="gray_little">#A2A2A2</color><!--灰白， 首页TAB文字颜色 -->
+    <color name="blue_little">#19AEEE</color><!--灰白， 首页TAB选中时文字颜色 -->
+    <color name="pupple">#e48af1</color><!--部落业务颜色-->
+    <color name="orange">#e7b37d</color><!--部落假期颜色-->
+    <color name="homepage_gray">#F9F9F9</color><!--部落假期颜色-->
+
+
+    <!-- BottomTab -->
+    <color name="tab_default_text">#515151</color>
+
+
+
+</resources>

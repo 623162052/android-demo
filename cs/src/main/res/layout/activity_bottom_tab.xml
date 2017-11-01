@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="cs.app.widget.bottomtab.BottomTabActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <RadioGroup
+        android:id="@+id/rrg_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/tab_gray"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginTop="1dp"
+        android:weightSum="4">
+
+        <RadioButton
+            android:id="@+id/radio_homePage"
+            style="@style/tab"
+            android:drawableTop="@drawable/tab_home"
+            android:layout_marginTop="4dp"
+            android:text="首页" />
+
+        <RadioButton
+            android:id="@+id/radio_assistant"
+            style="@style/tab"
+            android:drawableTop="@drawable/tab_assistant_selector"
+            android:layout_marginTop="4dp"
+            android:text="工单" />
+
+        <RadioButton
+            android:id="@+id/radio_tribe"
+            style="@style/tab"
+            android:drawableTop="@drawable/tab_contact"
+            android:layout_marginTop="4dp"
+            android:text="联系人" />
+
+        <RadioButton
+            android:id="@+id/radio_my"
+            style="@style/tab"
+            android:drawableTop="@drawable/tab_my"
+            android:layout_marginTop="4dp"
+            android:text="我的" />
+
+    </RadioGroup>
+
+</LinearLayout>

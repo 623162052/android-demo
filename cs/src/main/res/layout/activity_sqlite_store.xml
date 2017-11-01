@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.androidx.store.StoreActivity" >
+
+    <!-- wrap_content:宽度内容包裹 -->
+    <Button 
+        android:id="@+id/store_btn_write"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"		
+        android:layout_height="wrap_content"
+        android:text="write" />
+   
+    <Button 
+        android:id="@+id/sp_btn_write"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"		
+        android:layout_height="wrap_content"
+        android:text="sp write" />
+    
+    <Button 
+        android:id="@+id/sp_btn_read"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"		
+        android:layout_height="wrap_content"
+        android:text="sp read" />
+    
+    <Button 
+        android:id="@+id/sqlite_btn_oper"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"		
+        android:layout_height="wrap_content"
+        android:text="sqlite_oper" />
+    
+    
+</LinearLayout>

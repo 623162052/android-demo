@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="cs.app">
+
+    <!-- 其他 -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- 网路 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- 存储 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- 账号 -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+
+    <!-- android:theme="@style/Theme.AppCompat.Light" -->
+    <application
+        android:name="cs.plugins.base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".task.AsyncTaskActivity"
+            android:label="@string/title_activity_async_task" />
+        <activity
+            android:name=".activity.webview.WebViewActivity"
+            android:label="@string/title_activity_web_view"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".widget.ActionbarActivity"
+            android:label="@string/title_activity_action_bar"
+            android:theme="@style/NoActionBarAppCompatTheme" />
+        <activity
+            android:name=".handler.HandlerActivity1"
+            android:label="@string/title_activity_handler" />
+        <activity
+            android:name=".handler.HandlerActivity2"
+            android:label="@string/title_activity_handler_activity2" />
+        <activity
+            android:name=".handler.HandlerActivity3"
+            android:label="@string/title_activity_handler_activity3" />
+        <activity
+            android:name="cs.plugins.http.volley.HttpVolleyActivity"
+            android:label="@string/title_activity_http_volley" />
+        <activity
+            android:name="cs.plugins.http.volley.ImageRequestActivity"
+            android:label="@string/title_activity_image_request" />
+        <activity
+            android:name="cs.plugins.http.volley.VolleyJsonActivity"
+            android:label="@string/title_activity_volley_json" />
+        <activity
+            android:name="cs.plugins.http.volley.customer.CustomRequestActivity"
+            android:label="@string/title_activity_custom_request" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="f77b16ae80dcd0b88357a0412cadd38c" />
+        <!-- 定位需要的服务 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity
+            android:name="cs.plugins.map.amap.location.StartActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name" />
+        <activity
+            android:name="cs.plugins.map.amap.location.Battery_Saving_Activity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="cs.plugins.map.amap.location.Device_Sensors_Activity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="cs.plugins.map.amap.location.Hight_Accuracy_Activity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="cs.plugins.map.amap.location.GeoFence_Activity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="cs.plugins.map.amap.location.Assistant_Location_Activity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- XML注册Receiver -->
+        <!-- 代码注册见RegisterReceiverActivity -->
+        <receiver android:name=".broadcast.basic.TestReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.EDIT" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Activity -->
+        <activity
+            android:name=".widget.WidgetActivity"
+            android:label="@string/title_activity_widget" />
+        <activity
+            android:name=".widget.update.UpdateActivity"
+            android:label="@string/title_activity_update" />
+        <activity
+            android:name=".service.ServiceActivity"
+            android:label="@string/title_activity_service" />
+        <activity
+            android:name=".broadcast.basic.BroadcastActivity"
+            android:label="@string/title_activity_broadcast" />
+        <activity
+            android:name=".broadcast.register.RegisterReceiverActivity"
+            android:label="@string/title_activity_register_receiver" />
+        <activity
+            android:name=".widget.tab.TabsActivity"
+            android:label="@string/title_activity_tabs"
+            android:theme="@style/AppCompatTheme" />
+
+        <!-- 此处theme表示一个activity在另一个activity中显示的效果 -->
+        <activity
+            android:name=".handler.HandlerLooperActivity"
+            android:label="@string/title_activity_handler_looper" />
+        <activity
+            android:name=".widget.IconActivity"
+            android:label="@string/title_activity_icon" />
+
+        <!-- amap -->
+        <activity android:name="cs.plugins.map.amap.map2d.AMapMainActivity" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.basic.BasicMapActivity"
+            android:label="@string/basic_map"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.basic.OsmMapActivity"
+            android:label="@string/osm_map"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.basic.BaseMapFragmentActivity"
+            android:label="@string/base_fragment_map"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.basic.CameraActivity"
+            android:label="@string/camera_demo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.basic.EventsActivity"
+            android:label="@string/events_demo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.basic.LayersActivity"
+            android:label="@string/layers_demo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.basic.MapOptionActivity"
+            android:label="@string/mapOption_demo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.basic.ScreenShotActivity"
+            android:label="@string/screenshot_demo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.basic.UiSettingsActivity"
+            android:label="@string/uisettings_demo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.overlay.MarkerActivity"
+            android:label="@string/marker_demo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.overlay.PolylineActivity"
+            android:label="@string/polyline_demo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.overlay.GroundOverlayActivity"
+            android:label="@string/groundoverlay_demo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.overlay.PolygonActivity"
+            android:label="@string/polygon_demo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.overlay.CircleActivity"
+            android:label="@string/circle_demo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.location.LocationSourceActivity"
+            android:label="@string/locationsource_demo"
+            android:screenOrientation="portrait" />
+        <!--
+        <activity
+            android:name="cs.plugins.map.amap.map2d.location.LocationGPSActivity"
+            android:label="@string/locationGPS_demo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.location.LocationSensorSourceActivity"
+            android:label="@string/locationSensorGPS_demo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.location.LocationNetworkActivity"
+            android:label="@string/locationNetwork_demo"
+            android:screenOrientation="portrait" />
+        -->
+        <activity
+            android:name="cs.plugins.map.amap.map2d.geocoder.GeocoderActivity"
+            android:label="@string/geocoder_demo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.route.RouteActivity"
+            android:label="@string/route_demo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.busline.BuslineActivity"
+            android:label="@string/busline_demo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.poisearch.PoiKeywordSearchActivity"
+            android:label="@string/poikeywordsearch_demo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.poisearch.PoiAroundSearchActivity"
+            android:label="@string/poiaroundsearch_demo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.district.DistrictActivity"
+            android:label="@string/district_demo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.district.DistrictWithBoundaryActivity"
+            android:label="@string/district_boundary_demo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.cloud.CloudActivity"
+            android:label="@string/cloud_demo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.cloud.CloudDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.cloud.PreviewPhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.share.ShareActivity"
+            android:label="@string/share_demo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.map2d.weather.WeatherSearchActivity"
+            android:label="@string/weather_demo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cs.plugins.map.amap.demo.TrackActivity"
+            android:label="@string/title_activity_track"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <service
+            android:name="cs.plugins.map.amap.demo.TrackService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cs.amap.startTrackService" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activity.material.MaterialDesignActivity"
+            android:label="@string/title_activity_material_design" />
+        <activity
+            android:name=".activity.material.MaterialListsActivity"
+            android:label="@string/title_activity_material_lists" />
+        <activity
+            android:name=".activity.material.CardViewActivity"
+            android:label="@string/title_activity_card_view" />
+        <activity
+            android:name=".activity.material.AnimationActivity"
+            android:label="@string/title_activity_animation" />
+        <activity
+            android:name=".activity.fragment.FragmentActivity"
+            android:label="@string/title_activity_fragment"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name="cs.plugins.storage.sqlite.SQLiteActivity"
+            android:label="@string/title_activity_sqlite" />
+        <activity
+            android:name=".widget.tablayout.TabLayoutActivity"
+            android:label="@string/title_activity_tab_layout"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppCompatTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cs.app.MainActivity" />
+        </activity>
+        <activity
+            android:name=".widget.DrawerLayoutActivity"
+            android:label="@string/title_activity_drawer_layout"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name=".widget.notification.NotificationActivity"
+            android:label="@string/title_activity_notification" />
+        <activity
+            android:name=".widget.swiperefresh.SwipeRefreshActivity"
+            android:label="@string/title_activity_swipe_refresh"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name=".widget.search.SearchActivity"
+            android:label="@string/title_activity_search">
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".widget.search.SearchResultsActivity"
+            android:label="@string/title_activity_search_results">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cs.plugins.storage.realm.json.RealmActivity"
+            android:label="@string/title_activity_realm_json" />
+        <activity
+            android:name="cs.plugins.map.amap.demo.LocationAccuracyActivity"
+            android:label="@string/title_activity_location_accuracy" />
+        <activity
+            android:name=".widget.gridview.GridViewActivity"
+            android:label="@string/title_activity_grid_view" />
+        <activity
+            android:name=".widget.charts.LineChartsActivity"
+            android:label="@string/title_activity_line_charts" />
+        <activity
+            android:name=".widget.bottomtab.BottomTabActivity"
+            android:label="@string/title_activity_bottom_tab" />
+    </application>
+
+</manifest>
