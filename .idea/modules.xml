@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/android-demo.iml" filepath="$PROJECT_DIR$/.idea/modules/android-demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cs/cs.iml" filepath="$PROJECT_DIR$/.idea/modules/cs/cs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cs/cs.iml" filepath="$PROJECT_DIR$/cs/cs.iml" />
     </modules>
   </component>
 </project>

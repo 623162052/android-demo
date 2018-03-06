@@ -18,13 +18,8 @@
             用于BaseActivity、BaseCompatActivity、BaseFragment、Adapter
 
 
-问题：
-    1、java.lang.NoClassDefFoundError: butterknife.internal.ButterKnifeProcessor
-        activeandroid与butterknife库冲突
 
-
-
----指导规范------------------------------------------------------------------------------------
+---指导规范---
 
     BaseApplication
     BaseActivity

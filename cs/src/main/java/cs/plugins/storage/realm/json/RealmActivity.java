@@ -31,10 +31,11 @@ public class RealmActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_realm_example);
 
+        // TODO: 临时注释
         // Create a RealmConfiguration which is to locate Realm file in package's "files" directory.
-        RealmConfiguration realmConfig = new RealmConfiguration.Builder(this).build();
-        // Get a Realm instance for this thread
-        realm = Realm.getInstance(realmConfig);
+//        RealmConfiguration realmConfig = new RealmConfiguration.Builder(this).build();
+//        // Get a Realm instance for this thread
+//        realm = Realm.getInstance(realmConfig);
     }
 
     @Override
@@ -73,8 +74,9 @@ public class RealmActivity extends Activity {
         loadJsonFromJsonObject();
         loadJsonFromString();
 
-        // 查出City.class的所有数据
-        return realm.allObjects(CityEntity.class);
+        // 查出City.class的所有数据    TODO: 临时注释
+//        return realm.allObjects(CityEntity.class);
+        return null;
     }
 
     /**
